@@ -1,0 +1,27 @@
+/* @import "./utils/functions"; */
+/* @import "./utils/mixins"; */
+/* @import "./utils/extensions"; */
+/* @import "./base/base"; */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* @import "./components/buttons"; */
+/* @import "./layout/header"; */
+/* @import "./layout/nav"; */
+/* @import "./layout/container"; */
+/* @import "./layout/form"; */
+/* @import "./pages/work"; */
+/* @import "./pages/about"; */
+/* @import "./pages/project"; */
+
+/*# sourceMappingURL=style.css.map */

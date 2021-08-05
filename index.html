@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>Ohmyfood! Paris</title>
+</head>
+<body>
+    
+    <header class="header">
+        <h1 class="header__logo">
+            Ohmyfood
+        </h1>
+        <nav class="header__nav">
+            <ul>
+                <li class="header__link"> <a href="index.html">Retour à la page d'accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="localisation">
+        <form action="#" class="localisation__input">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" placeholder="Chercher une ville" value="Paris, Belleville" name="search">
+            <button type="submit" class="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </section>
+
+    <section class="presentation">
+        <h2 class="presentation__heading">
+            Réservez le menu qui vous convient
+        </h2>
+        <p class="presentation__byline">
+            Découvrez des restaurants d'exception, séléctionnés par nos soins.
+        </p>
+        <button class="presentation__btn">Explorer nos restaurants</button>
+    </section>
+
+    <section class="fonctionnement">
+        <h2 class="fonctionnement__heading">Fonctionnement</h2>
+        <button class="choisir">Choisissez un restaurant</button>
+        <button class="composer">Composez votre menu</button>
+        <button class="deguster">Dégustez au restaurant</button>
+    </section>
+
+    <main class="restaurants">
+        <div class="restaurants-flex">
+            <h2 class="restaurants__heading">Restaurants</h2>
+            <section class="restaurants-card" onclick="location.href='/project.html'" >
+                <div class="restaurants-card__image">
+                    <img src="" alt="">
+                </div>
+                <h3 class="reastaurants-card__heading">
+                    Nom du restaurant
+                </h3>
+                <p class="restaurant-card__byline">
+                    Ville
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h1 class="footer__logo">
+            Ohmyfood
+        </h1>
+        <nav class="footer__nav">
+            <ul>
+                <li class="footer__link"> <a href="#">Proposer un restaurant</a></li>
+                <li class="footer__link"> <a href="#">Devenir partenaire</a></li>
+                <li class="footer__link"> <a href="#">Mentions légales</a></li>
+                <li class="footer__link"> <a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

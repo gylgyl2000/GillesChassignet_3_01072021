@@ -1,0 +1,19 @@
+{
+  "name": "gilleschassignet_3_01072021",
+  "version": "1.0.0",
+  "description": "GillesChassignet_3_01072021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gylgyl2000/GillesChassignet_3_01072021.git"
+  },
+  "author": "Gilles Chassignet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gylgyl2000/GillesChassignet_3_01072021/issues"
+  },
+  "homepage": "https://github.com/gylgyl2000/GillesChassignet_3_01072021#readme"
+}

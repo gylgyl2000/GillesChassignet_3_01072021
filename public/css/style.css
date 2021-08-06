@@ -1,10 +1,21 @@
 /* @import "./utils/functions"; */
 /* @import "./utils/mixins"; */
 /* @import "./utils/extensions"; */
-/* @import "./base/base"; */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 100;
   line-height: 1.7;
 }
@@ -16,7 +27,29 @@ h1 {
 }
 
 /* @import "./components/buttons"; */
-/* @import "./layout/header"; */
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 1rem 0 1rem;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__link {
+  display: none;
+}
+.header__logo {
+  width: 100%;
+  text-align: center;
+}
+
+.localisation {
+  padding-top: 10vh;
+}
+
 /* @import "./layout/nav"; */
 /* @import "./layout/container"; */
 /* @import "./layout/form"; */

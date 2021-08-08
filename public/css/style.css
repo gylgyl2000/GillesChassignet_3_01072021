@@ -49,6 +49,31 @@ h1 {
 .localisation {
   padding-top: 10vh;
 }
+.localisation__input {
+  width: 100%;
+  height: 8vh;
+  text-align: center;
+  background-color: #E8E8E8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 3px 0px inset;
+}
+.localisation__input i {
+  font-size: 1rem;
+}
+.localisation__input input {
+  border: none;
+  height: 4vh;
+  font-size: 1rem;
+  background-color: transparent;
+  font-weight: bolder;
+  margin-left: 10px;
+  width: 33vw;
+}
+.localisation__input button {
+  display: none;
+}
 
 /* @import "./layout/nav"; */
 /* @import "./layout/container"; */

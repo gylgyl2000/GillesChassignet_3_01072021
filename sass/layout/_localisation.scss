@@ -1,3 +1,28 @@
 .localisation {
     padding-top: $layout-padding-top;
+    &__input {
+        width: 100%;
+        height: 8vh;
+        text-align: center;
+        background-color: $colour-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 5px 3px 0px inset;
+        & i {
+            font-size: 1rem;
+        }
+        & input {
+            border: none;
+            height: 4vh;
+            font-size: 1rem;
+            background-color: transparent;
+            font-weight: bolder;
+            margin-left: 10px;
+            width: 33vw;
+        }
+        & button {
+            display: none;
+        }
+    }
 }

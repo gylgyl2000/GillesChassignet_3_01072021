@@ -1,0 +1,28 @@
+.presentation {
+    padding: $layout-padding;
+    background-color: $colour-grey-light;
+    text-align: center;
+    &__heading {
+        width: 80%;
+        margin: 2vh auto;
+    }
+    &__btn {
+        padding: 2.5vh 5vw;
+        border-radius: 30px;
+        margin: 9vw;
+        border: none;
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        color: white;
+        font-weight: 900;
+        font-size: 0.9rem;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        &:hover {
+            background-image: linear-gradient(#9356DC, #FF79DA);
+        }
+        &:active {
+            background-image: linear-gradient(#9356DC, #FF79DA);
+            transform: translateY(4px);
+            box-shadow: none;
+        }
+    }
+}

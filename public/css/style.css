@@ -57,6 +57,7 @@ p {
   position: fixed;
   width: 100%;
   padding: 1rem 1rem 0 1rem;
+  z-index: 2;
 }
 .header__nav {
   display: flex;
@@ -204,7 +205,29 @@ p {
   right: 6vw;
 }
 
-/* @import "./layout/nav"; */
+.footer {
+  background-color: #353535;
+  padding: 1vh 6vw 5vh 6vw;
+  color: #fff;
+}
+.footer__logo {
+  font-size: 1.1rem;
+  line-height: 3;
+}
+.footer__link {
+  list-style: none;
+  line-height: initial;
+}
+.footer__link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.footer__link i {
+  font-size: 0.8rem;
+}
+
 /* @import "./layout/container"; */
 /* @import "./layout/form"; */
 /* @import "./pages/work"; */

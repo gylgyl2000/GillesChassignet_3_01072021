@@ -1,0 +1,22 @@
+.footer {
+    background-color: $colour-grey-bold;
+    padding: 1vh 6vw 5vh 6vw;
+    color: $colour-white;
+    &__logo {
+        font-size: 1.1rem;
+        line-height: 3;
+    }
+    &__link {
+        list-style: none;
+        line-height: initial;
+        & a {
+            color: $colour-white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        & i {
+            font-size: 0.8rem;
+        }
+    }
+}

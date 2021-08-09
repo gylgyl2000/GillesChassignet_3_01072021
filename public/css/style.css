@@ -1,5 +1,4 @@
 /* @import "./utils/functions"; */
-/* @import "./utils/mixins"; */
 /* @import "./utils/extensions"; */
 *,
 *::after,
@@ -34,6 +33,16 @@ h2 {
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 1.6rem;
+}
+
+.fonctionnement h2,
+.restaurants h2 {
+  margin: 3.5vh 0 1vh 0;
+}
+
+h3 {
+  font-size: 1.1rem;
+  padding-left: 3.5vw;
 }
 
 p {
@@ -92,7 +101,7 @@ p {
 }
 
 .presentation {
-  padding: 1.2rem;
+  padding: 5vh 5vw 10vh 5vw;
   background-color: #F2F2F2;
   text-align: center;
 }
@@ -103,7 +112,7 @@ p {
 .presentation__btn {
   padding: 2.5vh 5vw;
   border-radius: 30px;
-  margin: 9vw;
+  margin: 6vw 9vh -3vw 9vh;
   border: none;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -121,12 +130,9 @@ p {
 }
 
 .fonctionnement {
-  padding: 1.2rem;
+  padding: 5vh 5vw 10vh 5vw;
   display: flex;
   flex-direction: column;
-}
-.fonctionnement__heading {
-  margin: 3.5vh 0 1vh 0;
 }
 .fonctionnement button {
   text-align: left;
@@ -153,6 +159,49 @@ p {
 .fonctionnement button i {
   margin: 0 6vw;
   font-size: 1.2rem;
+}
+
+.restaurants {
+  padding: 5vh 5vw 10vh 5vw;
+  background-color: #F2F2F2;
+}
+.restaurants-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 37vh;
+  box-shadow: 0 4px 8px 0 #ABABAB;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 3.5vh;
+}
+.restaurants-card__image {
+  position: relative;
+}
+.restaurants-card__image span {
+  position: absolute;
+  top: 2vh;
+  right: 3.5vw;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 2px 12px;
+  color: green;
+  background-color: #99E2D0;
+}
+.restaurants-card__image img {
+  width: 100%;
+  height: 26vh;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+.restaurants-card__byline {
+  padding-left: 3.5vw;
+}
+.restaurants-card i {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 4vh;
+  right: 6vw;
 }
 
 /* @import "./layout/nav"; */

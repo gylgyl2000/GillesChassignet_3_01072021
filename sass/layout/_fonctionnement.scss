@@ -2,9 +2,6 @@
     padding: $layout-padding;
     display: flex;
     flex-direction: column;
-    &__heading {
-        margin: 3.5vh 0 1vh 0;
-    }
     & button {
         text-align: left;
         line-height: inherit;

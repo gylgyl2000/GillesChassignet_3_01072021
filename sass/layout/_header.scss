@@ -2,14 +2,14 @@
     background-color: $colour-white;
     position: fixed;
     width: 100%;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 2rem 0 2rem;
     z-index: 2;
     &__nav {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    &__link {
+    &__link--hided {
         display: none;
     }
     &__logo {

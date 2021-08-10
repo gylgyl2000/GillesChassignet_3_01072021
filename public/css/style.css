@@ -1,5 +1,6 @@
 /* @import "./utils/functions"; */
 /* @import "./utils/extensions"; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,900&family=Shrikhand&display=swap");
 *,
 *::after,
 *::before {
@@ -29,6 +30,11 @@ h1 {
   font-weight: 400;
 }
 
+.carte h1 {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: 900;
@@ -40,9 +46,15 @@ h2 {
   margin: 3.5vh 0 1vh 0;
 }
 
+.carte h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 5vh;
+  text-transform: uppercase;
+}
+
 h3 {
   font-size: 1.1rem;
-  padding-left: 3.5vw;
 }
 
 p {
@@ -56,7 +68,7 @@ p {
   background-color: #fff;
   position: fixed;
   width: 100%;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem 2rem 0 2rem;
   z-index: 2;
 }
 .header__nav {
@@ -64,7 +76,7 @@ p {
   flex-direction: row;
   align-items: center;
 }
-.header__link {
+.header__link--hided {
   display: none;
 }
 .header__logo {
@@ -111,15 +123,17 @@ p {
   margin: 2vh auto;
 }
 .presentation__btn {
-  padding: 2.5vh 5vw;
   border-radius: 30px;
-  margin: 6vw 9vh -3vw 9vh;
   border: none;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
   font-weight: 900;
-  font-size: 0.9rem;
+  font-size: 1rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  width: max-content;
+  align-self: center;
+  margin-top: 8vh;
+  padding: 2.5vh 6vw;
 }
 .presentation__btn:hover {
   background-image: linear-gradient(#9356DC, #FF79DA);
@@ -191,11 +205,11 @@ p {
 }
 .restaurants-card__image img {
   width: 100%;
-  height: 26vh;
   object-fit: cover;
+  height: 26vh;
   border-radius: 18px 18px 0 0;
 }
-.restaurants-card__byline {
+.restaurants-card__heading, .restaurants-card__byline {
   padding-left: 3.5vw;
 }
 .restaurants-card i {
@@ -228,7 +242,76 @@ p {
   font-size: 0.8rem;
 }
 
-/* @import "./layout/container"; */
+.carte img {
+  width: 100%;
+  object-fit: cover;
+  height: 50vh;
+}
+.carte--flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -8vh;
+  background-color: #F2F2F2;
+  border-radius: 40px;
+  padding: 5vh 5vw 10vh 5vw;
+}
+.carte--flex i {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 10vw;
+}
+.carte__subheading {
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+.carte__subheading::after {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  left: 0;
+  bottom: 0;
+}
+.carte .menu {
+  position: relative;
+  background-color: #fff;
+  padding: 1.5vh;
+  border-radius: 15px;
+  margin-top: 2vh;
+}
+.carte .menu__byline, .carte .menu__prix {
+  font-size: 1rem;
+}
+.carte .menu__prix {
+  position: absolute;
+  font-weight: 900;
+  right: 20px;
+  bottom: 5px;
+}
+.carte .menu__btn {
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-weight: 900;
+  font-size: 1rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  width: max-content;
+  align-self: center;
+  margin-top: 8vh;
+  padding: 2.5vh 10vw;
+}
+.carte .menu__btn:hover {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+}
+.carte .menu__btn:active {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
 /* @import "./layout/form"; */
 /* @import "./pages/work"; */
 /* @import "./pages/about"; */

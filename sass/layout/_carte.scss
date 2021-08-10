@@ -1,0 +1,51 @@
+.carte {
+    & img {
+        @include carte-img;
+    }
+    &--flex {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: -8vh;
+        background-color: $colour-grey-light;
+        border-radius: 40px;
+        padding: $layout-padding;
+        & i {
+            @include i;
+            right: 10vw;
+        }
+    }
+    &__subheading {
+        position: relative;
+        padding-bottom: .25rem;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 3rem;
+            height: .25rem;
+            background-color: $colour-tertiary;
+            left: 0;
+            bottom: 0
+        }
+    }
+    & .menu {
+        position: relative;
+        background-color: $colour-white;
+        padding: 1.5vh;
+        border-radius: 15px;
+        margin-top: 2vh;
+        &__byline, &__prix {
+            font-size: 1rem;
+        }
+        &__prix {
+            position: absolute;
+            font-weight: 900;
+            right: 20px;
+            bottom: 5px;
+        }
+        &__btn {
+            @include button;
+            padding: 2.5vh 10vw;
+        }
+    }
+}

@@ -19,12 +19,11 @@
         &__image img {
             @include card-img;
         }
-        &__byline {
+        &__heading, &__byline {
             padding-left: 3.5vw;
         }
         & i {
-            position: absolute;
-            font-size: 1.5rem;
+            @include i;
             bottom: 4vh;
             right: 6vw;
         }

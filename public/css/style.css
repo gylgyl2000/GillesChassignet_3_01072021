@@ -229,10 +229,28 @@ p {
 .restaurants-card__heading, .restaurants-card__byline {
   padding-left: 3.5vw;
 }
-.restaurants-card i {
+.restaurants-card label {
+  position: inherit;
+  top: -25px;
+}
+.restaurants-card input[type=checkbox] {
+  display: none;
+}
+.restaurants-card input[type=checkbox].check + label i {
   position: absolute;
   font-size: 1.5rem;
-  bottom: 4vh;
+  transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
+  color: #000;
+  background-image: #F2F2F2;
+}
+.restaurants-card input[type=checkbox].check:hover + label i, .restaurants-card input[type=checkbox].check:checked + label i {
+  cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-card i {
   right: 6vw;
 }
 
@@ -273,10 +291,29 @@ p {
   border-radius: 40px;
   padding: 5vh 5vw 10vh 5vw;
 }
-.carte--flex i {
+.carte--flex label {
+  position: inherit;
+  top: -25px;
+}
+.carte--flex input[type=checkbox] {
+  display: none;
+}
+.carte--flex input[type=checkbox].check + label i {
   position: absolute;
   font-size: 1.5rem;
-  right: 10vw;
+  transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
+  color: #000;
+  background-image: #F2F2F2;
+}
+.carte--flex input[type=checkbox].check:hover + label i, .carte--flex input[type=checkbox].check:checked + label i {
+  cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.carte--flex i {
+  right: 3vw;
 }
 .carte__subheading {
   position: relative;

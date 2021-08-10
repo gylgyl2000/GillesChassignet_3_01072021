@@ -10,9 +10,9 @@
         background-color: $colour-grey-light;
         border-radius: 40px;
         padding: $layout-padding;
+        @include jaime;
         & i {
-            @include i;
-            right: 10vw;
+            right: 3vw;
         }
     }
     &__subheading {

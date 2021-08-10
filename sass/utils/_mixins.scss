@@ -30,9 +30,28 @@
     height: 50vh;
 }
 
-@mixin i {
-    position: absolute;
-    font-size: 1.5rem;
+@mixin jaime {
+    & label {
+        position: inherit;
+        top: -25px;
+    }
+    & input[type="checkbox"] {
+        display: none;
+        &.check + label i {
+            position: absolute;
+            font-size: 1.5rem;
+            transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
+            color: #000;
+            background-image: $colour-grey-light;
+        }
+        &.check:hover + label i, &.check:checked + label i {
+            cursor: pointer;
+            background-image: linear-gradient($colour-secondary, $colour-primary);
+            font-weight: bold;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 @mixin button {

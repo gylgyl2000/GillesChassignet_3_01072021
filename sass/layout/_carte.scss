@@ -44,7 +44,7 @@
             bottom: 5px;
         }
         &__btn {
-            @include button;
+            @include explorer-commander-btn;
             padding: 2.5vh 10vw;
         }
     }

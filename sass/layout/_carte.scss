@@ -29,19 +29,63 @@
         }
     }
     & .menu {
+        display: flex;
         position: relative;
+        height: 11vvh;
         background-color: $colour-white;
-        padding: 1.5vh;
         border-radius: 15px;
         margin-top: 2vh;
+        animation: slideup 1s ease-in-out;
+        animation-fill-mode: backwards;        
+        @for $i from 2 through 4 {
+            &:nth-child(#{$i + 1}) {
+                animation-delay: 0.2s * $i;
+            }
+        }
+        & input[type="checkbox"] {
+            display: none;
+            &.menu__check:checked + .menu__selection {
+                opacity: 100%;
+                width: 16vw;
+            }
+        }
+        &__info {
+            padding: 1.5vh;
+            max-width: 100%;
+            overflow: hidden;
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        &__texte {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        &__titre, &__byline {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         &__byline, &__prix {
             font-size: 1rem;
         }
         &__prix {
-            position: absolute;
+            display: flex;
             font-weight: 900;
-            right: 20px;
-            bottom: 5px;
+            align-items: flex-end;
+        }
+        &__selection {
+            @include selection;
+        }
+        &:hover .menu__selection, &:checked .menu__selection {
+            opacity: 100%;
+            width: 16vw;
+        }
+        &:hover .menu__selection--hover {
+            transform: rotate(0deg);
         }
         &__btn {
             @include explorer-commander-btn;

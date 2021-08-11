@@ -31,13 +31,14 @@
 }
 
 @mixin jaime {
-    & label {
+    & label.jaime {
         position: inherit;
         top: -25px;
     }
     & input[type="checkbox"] {
         display: none;
         &.check + label i {
+            font-weight: inherit;
             position: absolute;
             font-size: 1.5rem;
             transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
@@ -91,5 +92,33 @@
     background-color: $colour-grey-light;
     &:hover {
         background-color: $colour-secondary-light;
+    }
+}
+
+@mixin selection {
+    background: $colour-tertiary;
+    cursor: pointer;
+    height: auto;
+    width: 0;
+    opacity: 0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    &--hover {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.5rem;
+        color: $colour-white;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        transform: rotate(360deg);
+        transition: 0.4s ease-in-out;
     }
 }

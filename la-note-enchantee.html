@@ -27,140 +27,247 @@
                 alt="La note enchantée">
             <div class="carte--flex">
                 <h1 class="carte__heading">La note enchantée</h1>
-                <i class="far fa-heart"></i>
+                <input type="checkbox" id="jaime" name="jaime" class="check jaime" value="J'aime">
+                <label class="jaime" for="jaime"><i class="far fa-heart"></i></label>
                 <!-- Entrées -->
-                <h2 class="carte__subheading">
-                    Entrées
-                </h2>
-                <!-- Entrée 1 -->
-                <div class="menu">
-                    <h3 class="menu__titre">
-                        Ravioles de foie gras
-                    </h3>
-                    <p class="menu__byline">
-                        Accompagnés de leur crème à la truffe
-                    </p>
-                    <div class="menu__prix">
-                        25€
+                <section class="entree carteItem">
+                    <h2 class="carte__subheading">
+                        Entrées
+                    </h2>
+                    <!-- Entrée 1 -->
+                    <div class="menu">
+                        <div class="menu__info">
+                            <div class="menu__texte">
+                                <h3 class="menu__titre">
+                                    Ravioles de foie gras
+                                </h3>
+                                <p class="menu__byline">
+                                    Accompagnés de leur crème à la truffe
+                                </p>
+                            </div>
+                            <p class="menu__prix">
+                                25€
+                            </p>
+                        </div>
+                        <input type="checkbox" id="entree1" class="menu__check" name="entree1">
+                        <label class="menu__selection" for="entree1">
+                            <span class="menu__selection--hover">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
                     </div>
-                </div>
-                <!-- Entrée 2 -->
-                <div class="menu">
-                    <h3 class="menu__titre">
-                        Caviar osciètre
-                    </h3>
-                    <p class="menu__byline">
-                        Sur blini à la farine de blé noir
-                    </p>
-                    <div class="menu__prix">
-                        35€
+                    <!-- Entrée 2 -->
+                    <div class="menu">
+                        <div class="menu__info">
+                            <div class="menu__texte">
+                                <h3 class="menu__titre">
+                                    Caviar osciètre
+                                </h3>
+                                <p class="menu__byline">
+                                    Sur blini à la farine de blé noir
+                                </p>
+                            </div>
+                            <p class="menu__prix">
+                                35€
+                            </p>
+                        </div>
+                        <input type="checkbox" id="entree2" class="menu__check" name="entree2">
+                        <label class="menu__selection" for="entree2">
+                            <span class="menu__selection--hover">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
                     </div>
-                </div>
-                <!-- Entrée 3 -->
-                <div class="menu">
-                    <h3 class="menu__titre">
-                        Homard et espuma de potiron
-                    </h3>
-                    <p class="menu__byline">
-                        Mariné aux zestes d'orange
-                    </p>
-                    <div class="menu__prix">
-                        20€
-                    </div>
+                    <!-- Entrée 3 -->
+                    <div class="menu">
+                        <div class="menu__info">
+                            <div class="menu__texte">
+                                <h3 class="menu__titre">
+                                    Homard et espuma de potiron
+                                </h3>
+                                <p class="menu__byline">
+                                    Mariné aux zestes d'orange
+                                </p>
+                            </div>
+                            <p class="menu__prix">
+                                20€
+                            </p>
+                        </div>
+                    <input type="checkbox" id="entree3" class="menu__check" name="entree3">
+                    <label class="menu__selection" for="entree3">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
 
-                <!-- Entrée 4 -->
-                <div class="menu">
-                    <h3 class="menu__titre">
-                        Foie gras de canard cuit entier
-                    </h3>
-                    <p class="menu__byline">
-                        Confiture de figue et pain toasté
-                    </p>
-                    <div class="menu__prix">
-                        35€
-                    </div>
+                    <!-- Entrée 4 -->
+                    <div class="menu">
+                        <div class="menu__info">
+                            <div class="menu__texte">
+                                <h3 class="menu__titre">
+                                    Foie gras de canard cuit entier
+                                </h3>
+                                <p class="menu__byline">
+                                    Confiture de figue et pain toasté
+                                </p>
+                            </div>
+                            <p class="menu__prix">
+                                35€
+                            </p>
+                        </div>
+                    <input type="checkbox" id="entree4" class="menu__check" name="entree4">
+                    <label class="menu__selection" for="entree4">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
-                <!-- Plats -->
+                </section>
+            <!-- Plats -->
+            <section class="plats carteItem">
                 <h2 class="carte__subheading">
                     Plats
                 </h2>
                 <!-- Plat 1 -->
                 <div class="menu">
-                    <h3 class="menu__titre">
-                        Noix de coquilles Saint-Jacques
-                    </h3>
-                    <p class="menu__byline">
-                        Sur lit de purée de céleri-rave
-                    </p>
-                    <div class="menu__prix">
-                        40€
+                    <div class="menu__info">
+                            <div class="menu__texte">
+                            <h3 class="menu__titre">
+                                Noix de coquilles Saint-Jacques
+                            </h3>
+                            <p class="menu__byline">
+                                Sur lit de purée de céleri-rave
+                            </p>
+                        </div>
+                        <p class="menu__prix">
+                            40€
+                        </p>
                     </div>
+                    <input type="checkbox" id="plat1" class="menu__check" name="plat1">
+                    <label class="menu__selection" for="plat1">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
                 <!-- Plat 2 -->
                 <div class="menu">
-                    <h3 class="menu__titre">
-                        Langoustine poêlée
-                    </h3>
-                    <p class="menu__byline">
-                        Purée de patate douce
-                    </p>
-                    <div class="menu__prix">
-                        35€
+                    <div class="menu__info">
+                            <div class="menu__texte">
+                            <h3 class="menu__titre">
+                                Langoustine poêlée
+                            </h3>
+                            <p class="menu__byline">
+                                Purée de patate douce
+                            </p>
+                        </div>
+                        <p class="menu__prix">
+                            35€
+                        </p>
                     </div>
+                    <input type="checkbox" id="plat2" class="menu__check" name="plat2">
+                    <label class="menu__selection" for="plat2">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
                 <!-- Plat 3 -->
                 <div class="menu">
-                    <h3 class="menu__titre">
-                        Mijoté de queue de boeuf
-                    </h3>
-                    <p class="menu__byline">
-                        Et riz sauvage aux zestes de citron
-                    </p>
-                    <div class="menu__prix">
-                        44€
+                    <div class="menu__info">
+                            <div class="menu__texte">
+                            <h3 class="menu__titre">
+                                Mijoté de queue de boeuf
+                            </h3>
+                            <p class="menu__byline">
+                                Et riz sauvage aux zestes de citron
+                            </p>
+                        </div>
+                        <p class="menu__prix">
+                            44€
+                        </p>
                     </div>
+                    <input type="checkbox" id="plat3" class="menu__check" name="plat3">
+                    <label class="menu__selection" for="plat3">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
-                <!-- Desserts -->
+            </section>
+            <!-- Desserts -->
+            <section class="plats carteItem">
                 <h2 class="carte__subheading">
                     Desserts
                 </h2>
                 <!-- Dessert 1 -->
                 <div class="menu">
-                    <h3 class="menu__titre">
-                        Macaron noisette et chocolat
-                    </h3>
-                    <p class="menu__byline">
-                        Glace au caramel brun et sel de Guérande
-                    </p>
-                    <div class="menu__prix">
-                        18€
+                    <div class="menu__info">
+                            <div class="menu__texte">
+                            <h3 class="menu__titre">
+                                Macaron noisette et chocolat
+                            </h3>
+                            <p class="menu__byline">
+                                Glace au caramel brun et sel de Guérande
+                            </p>
+                        </div>
+                        <p class="menu__prix">
+                            18€
+                        </p>
                     </div>
+                    <input type="checkbox" id="dessert1" class="menu__check" name="dessert1">
+                    <label class="menu__selection" for="dessert1">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
                 <!-- Dessert 2 -->
                 <div class="menu">
-                    <h3 class="menu__titre">
-                        Baba au rhum revisité
-                    </h3>
-                    <p class="menu__byline">
-                        Avec son coulis de citron
-                    </p>
-                    <div class="menu__prix">
-                        22€
+                    <div class="menu__info">
+                            <div class="menu__texte">
+                            <h3 class="menu__titre">
+                                Baba au rhum revisité
+                            </h3>
+                            <p class="menu__byline">
+                                Avec son coulis de citron
+                            </p>
+                        </div>
+                        <p class="menu__prix">
+                            22€
+                        </p>
                     </div>
+                    <input type="checkbox" id="dessert2" class="menu__check" name="dessert2">
+                    <label class="menu__selection" for="dessert2">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
                 <!-- Dessert 3 -->
                 <div class="menu">
-                    <h3 class="menu__titre">
-                        Tarte au citron meringuée
-                    </h3>
-                    <p class="menu__byline">
-                        Déstructurée
-                    </p>
-                    <div class="menu__prix">
-                        23€ 
+                    <div class="menu__info">
+                            <div class="menu__texte">
+                            <h3 class="menu__titre">
+                                Tarte au citron meringuée
+                            </h3>
+                            <p class="menu__byline">
+                                Déstructurée
+                            </p>
+                        </div>
+                        <p class="menu__prix">
+                            23€ 
+                        </p>
                     </div>
+                    <input type="checkbox" id="dessert3" class="menu__check" name="dessert3">
+                    <label class="menu__selection" for="dessert3">
+                        <span class="menu__selection--hover">
+                            <i class="fas fa-check-circle"></i>
+                        </span>
+                    </label>
                 </div>
+                </section>
                 <button
                     class="menu__btn">
                         Commander
@@ -178,7 +285,7 @@
                 <li class="footer__link"><i class="fas fa-utensils"></i>&nbsp;&nbsp;<a href="#"><strong> Proposer un restaurant</strong></a></li>
                 <li class="footer__link"><i class="fas fa-hands-helping"></i>&nbsp;<a href="#"><strong> Devenir partenaire</strong></a></li>
                 <li class="footer__link"> <a href="#">Mentions légales</a></li>
-                <li class="footer__link"> <a href="#">Contact</a></li>
+                <li class="footer__link"> <a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
         </nav>
     </footer>

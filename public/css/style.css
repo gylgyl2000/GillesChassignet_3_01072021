@@ -1,6 +1,40 @@
-/* @import "./utils/functions"; */
-/* @import "./utils/extensions"; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,900&family=Shrikhand&display=swap");
+@keyframes slideup {
+  0% {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateZ(-360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+/* @import "./utils/extensions"; */
 *,
 *::after,
 *::before {
@@ -11,10 +45,6 @@
 
 body {
   box-sizing: border-box;
-}
-
-button:hover {
-  cursor: pointer;
 }
 
 body {
@@ -63,7 +93,58 @@ p {
   line-height: 1.2;
 }
 
-/* @import "./components/buttons"; */
+.spinner {
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeout 0.2s 3s forwards;
+}
+.spinner .spin {
+  position: absolute;
+  border: 3px solid #9356DC;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+.spinner #loader2 {
+  border: 3px solid #FF79DA;
+  width: 220px;
+  height: 220px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+.spinner #loader3 {
+  border: 3px solid #99E2D0;
+  width: 240px;
+  height: 240px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+.spinner #loader4 {
+  border: 3px solid #353535;
+  width: 260px;
+  height: 260px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+.spinner__text {
+  color: #9356DC;
+  font-family: Arial;
+  font-size: 15px;
+}
+
 .header {
   background-color: #fff;
   position: fixed;
@@ -123,23 +204,25 @@ p {
   margin: 2vh auto;
 }
 .presentation__btn {
-  border-radius: 30px;
   border: none;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  color: white;
   font-weight: 900;
   font-size: 1rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-radius: 30px;
   width: max-content;
   align-self: center;
   margin-top: 8vh;
   padding: 2.5vh 6vw;
 }
 .presentation__btn:hover {
-  background-image: linear-gradient(#9356DC, #FF79DA);
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2);
 }
 .presentation__btn:active {
-  background-image: linear-gradient(#9356DC, #FF79DA);
   transform: translateY(4px);
   box-shadow: none;
 }
@@ -150,16 +233,25 @@ p {
   flex-direction: column;
 }
 .fonctionnement button {
+  border: none;
+  font-weight: 900;
+  font-size: 1rem;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
   text-align: left;
   line-height: inherit;
   height: 11vh;
   border-radius: 20px;
   margin: 3.5vh 0 0 3vw;
-  border: none;
   background-color: #F2F2F2;
-  font-weight: 900;
-  font-size: 1rem;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.fonctionnement button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2);
+}
+.fonctionnement button:hover {
+  background-color: #ff79DA21;
 }
 .fonctionnement button span {
   float: left;
@@ -176,6 +268,11 @@ p {
   font-size: 1.2rem;
 }
 
+#restaurants {
+  padding-top: 10vh;
+  margin-top: -10vh;
+}
+
 .restaurants {
   padding: 5vh 5vw 10vh 5vw;
   background-color: #F2F2F2;
@@ -189,6 +286,11 @@ p {
   border-radius: 20px;
   width: 100%;
   margin-top: 3.5vh;
+}
+.restaurants-card:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.9);
 }
 .restaurants-card__image {
   position: relative;
@@ -212,10 +314,29 @@ p {
 .restaurants-card__heading, .restaurants-card__byline {
   padding-left: 3.5vw;
 }
-.restaurants-card i {
+.restaurants-card label.jaime {
+  position: inherit;
+  top: -25px;
+}
+.restaurants-card input[type=checkbox] {
+  display: none;
+}
+.restaurants-card input[type=checkbox].check + label i {
+  font-weight: inherit;
   position: absolute;
   font-size: 1.5rem;
-  bottom: 4vh;
+  transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
+  color: #000;
+  background-image: #F2F2F2;
+}
+.restaurants-card input[type=checkbox].check:hover + label i, .restaurants-card input[type=checkbox].check:checked + label i {
+  cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants-card i {
   right: 6vw;
 }
 
@@ -256,10 +377,30 @@ p {
   border-radius: 40px;
   padding: 5vh 5vw 10vh 5vw;
 }
-.carte--flex i {
+.carte--flex label.jaime {
+  position: inherit;
+  top: -25px;
+}
+.carte--flex input[type=checkbox] {
+  display: none;
+}
+.carte--flex input[type=checkbox].check + label i {
+  font-weight: inherit;
   position: absolute;
   font-size: 1.5rem;
-  right: 10vw;
+  transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
+  color: #000;
+  background-image: #F2F2F2;
+}
+.carte--flex input[type=checkbox].check:hover + label i, .carte--flex input[type=checkbox].check:checked + label i {
+  cursor: pointer;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.carte--flex i {
+  right: 3vw;
 }
 .carte__subheading {
   position: relative;
@@ -275,39 +416,113 @@ p {
   bottom: 0;
 }
 .carte .menu {
+  display: flex;
   position: relative;
+  height: 11vvh;
   background-color: #fff;
-  padding: 1.5vh;
   border-radius: 15px;
   margin-top: 2vh;
+  animation: slideup 1s ease-in-out;
+  animation-fill-mode: backwards;
+}
+.carte .menu:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.carte .menu:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.carte .menu:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.carte .menu input[type=checkbox] {
+  display: none;
+}
+.carte .menu input[type=checkbox].menu__check:checked + .menu__selection {
+  opacity: 100%;
+  width: 16vw;
+}
+.carte .menu__info {
+  padding: 1.5vh;
+  max-width: 100%;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.carte .menu__texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.carte .menu__titre, .carte .menu__byline {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .carte .menu__byline, .carte .menu__prix {
   font-size: 1rem;
 }
 .carte .menu__prix {
-  position: absolute;
+  display: flex;
   font-weight: 900;
-  right: 20px;
-  bottom: 5px;
+  align-items: flex-end;
+}
+.carte .menu__selection {
+  background: #99E2D0;
+  cursor: pointer;
+  height: auto;
+  width: 0;
+  opacity: 0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.carte .menu__selection--hover {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  transform: rotate(360deg);
+  transition: 0.4s ease-in-out;
+}
+.carte .menu:hover .menu__selection, .carte .menu:checked .menu__selection {
+  opacity: 100%;
+  width: 16vw;
+}
+.carte .menu:hover .menu__selection--hover {
+  transform: rotate(0deg);
 }
 .carte .menu__btn {
-  border-radius: 30px;
   border: none;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  color: white;
   font-weight: 900;
   font-size: 1rem;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-radius: 30px;
   width: max-content;
   align-self: center;
   margin-top: 8vh;
   padding: 2.5vh 10vw;
 }
 .carte .menu__btn:hover {
-  background-image: linear-gradient(#9356DC, #FF79DA);
+  cursor: pointer;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2);
 }
 .carte .menu__btn:active {
-  background-image: linear-gradient(#9356DC, #FF79DA);
   transform: translateY(4px);
   box-shadow: none;
 }

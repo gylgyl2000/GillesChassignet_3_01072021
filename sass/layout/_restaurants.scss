@@ -1,3 +1,8 @@
+#restaurants {
+    padding-top: 10vh;
+    margin-top: -10vh;
+}
+
 .restaurants {
     padding: $layout-padding;
     background-color: $colour-grey-light;
@@ -22,9 +27,8 @@
         &__heading, &__byline {
             padding-left: 3.5vw;
         }
+        @include jaime;
         & i {
-            @include i;
-            bottom: 4vh;
             right: 6vw;
         }
     }

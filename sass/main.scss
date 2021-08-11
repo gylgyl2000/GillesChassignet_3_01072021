@@ -1,12 +1,12 @@
 @import "./utils/variables";
-/* @import "./utils/functions"; */
 @import "./utils/mixins";
+@import "./utils/animations";
 /* @import "./utils/extensions"; */
 
 @import "./base/base";
 @import "./base/typography";
 
-/* @import "./components/buttons"; */
+@import "./components/loading-spinner";
 
 @import "./layout/header";
 @import "./layout/localisation";

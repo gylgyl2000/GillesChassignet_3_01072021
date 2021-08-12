@@ -7,6 +7,14 @@
     border-radius: 20px;
     width: 100%;
     margin-top: 3.5vh;
+    @include desktop {
+        width: 24%;
+        height: 28vh;
+    }
+    @include tablet {
+        width: 48%;
+        height: 21vh;
+    }
     &:hover {
         cursor: pointer;
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
@@ -23,6 +31,12 @@
     @include img;
     height: 26vh;
     border-radius: 18px 18px 0 0;
+    @include desktop {
+        height: 20vh;
+    }
+    @include tablet {
+        height: 14vh;
+    }
 }
 
 @mixin carte-img {
@@ -34,6 +48,12 @@
     & label.jaime {
         position: inherit;
         top: -25px;
+        @include desktop {
+            top: -5px;
+        }
+        @include tablet {
+            top: -3vh;
+        }
     }
     & input[type="checkbox"] {
         display: none;
@@ -44,6 +64,12 @@
             transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
             color: #000;
             background-image: $colour-grey-light;
+            @include desktop {
+                font-size: 2rem;
+            }
+            @include tablet {
+                font-size: 2rem;
+            }
         }
         &.check:hover + label i, &.check:checked + label i {
             cursor: pointer;
@@ -61,6 +87,9 @@
     font-size: 1rem;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     transition-duration: .25s;
+    @include tablet {
+        font-size: 0.8rem;
+    }
     &:hover {
         cursor: pointer;
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
@@ -76,6 +105,13 @@
     width: max-content;
     align-self: center;
     margin-top: 8vh;
+    @include desktop {
+        margin: 3vh auto;
+        font-size: inherit;
+    }
+    @include tablet {
+        margin-top: 3vh;
+    }
     &:active {
         transform: translateY(4px);
         box-shadow: none;
@@ -90,6 +126,15 @@
     border-radius: 20px;
     margin: 3.5vh 0 0 3vw;
     background-color: $colour-grey-light;
+    @include desktop {
+        height: 6vh;
+        width: 30%;
+    }
+    @include tablet {
+        height: 5vh;
+        margin: 1vh 0 0 0;
+        width: 31%;
+    }
     &:hover {
         background-color: $colour-secondary-light;
     }
@@ -120,5 +165,21 @@
         direction: ltr;
         transform: rotate(360deg);
         transition: 0.4s ease-in-out;
+    }
+}
+
+// breakpoints
+
+/* Desktop */
+@mixin desktop {
+    @media (min-width: #{$desktop-min-width}) {
+        @content;
+    }
+}
+
+/* Tablette */
+@mixin tablet {
+    @media (min-width: #{$tablet-min-width}) and (max-width: #{$tablet-max-width}) {
+        @content;
     }
 }

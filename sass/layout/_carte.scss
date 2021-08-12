@@ -11,8 +11,21 @@
         border-radius: 40px;
         padding: $layout-padding;
         @include jaime;
+        @include desktop {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 5vh 5vw 0vh 5vw;
+            max-width: 100%;
+        }
+        @include tablet {
+            padding: 5vh 5vw 3vh 5vw;
+        }
         & i {
             right: 3vw;
+            @include desktop {
+                right: 0vw;
+            }
         }
     }
     &__subheading {
@@ -47,6 +60,9 @@
             &.menu__check:checked + .menu__selection {
                 opacity: 100%;
                 width: 16vw;
+                @include desktop {
+                    width: 5vw;
+                }
             }
         }
         &__info {
@@ -83,6 +99,9 @@
         &:hover .menu__selection, &:checked .menu__selection {
             opacity: 100%;
             width: 16vw;
+            @include desktop {
+                width: 5vw;
+            }
         }
         &:hover .menu__selection--hover {
             transform: rotate(0deg);
@@ -90,6 +109,19 @@
         &__btn {
             @include explorer-commander-btn;
             padding: 2.5vh 10vw;
+            @include desktop {
+                padding: 2.5vh 5vw;
+            }
+            @include tablet {
+                padding: 1.5vh 5vw;
+                font-size: 1.1rem;
+            }
         }
+    }
+}
+
+.carteItem {
+    @include desktop {
+        width: 32%;
     }
 }

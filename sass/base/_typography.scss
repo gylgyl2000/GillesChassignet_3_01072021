@@ -16,6 +16,10 @@ h1 {
 .carte h1 {
     font-size: 1.7rem;
     line-height: 1;
+    @include desktop {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 h2 {

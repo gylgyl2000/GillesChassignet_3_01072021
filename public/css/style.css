@@ -1,3 +1,5 @@
+/* Desktop */
+/* Tablette */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,900&family=Shrikhand&display=swap");
 @keyframes slideup {
   0% {
@@ -63,6 +65,12 @@ h1 {
 .carte h1 {
   font-size: 1.7rem;
   line-height: 1;
+}
+@media (min-width: 992px) {
+  .carte h1 {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 h2 {
@@ -168,6 +176,16 @@ p {
 .localisation {
   padding-top: 10vh;
 }
+@media (min-width: 992px) {
+  .localisation {
+    padding-top: 12vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .localisation {
+    padding-top: 8vh;
+  }
+}
 .localisation__input {
   width: 100%;
   height: 8vh;
@@ -178,8 +196,23 @@ p {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.2) 0 5px 3px 0px inset;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .localisation__input {
+    height: 6vh;
+  }
+}
 .localisation__input i {
   font-size: 1rem;
+}
+@media (min-width: 992px) {
+  .localisation__input i {
+    font-size: inherit;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .localisation__input i {
+    font-size: inherit;
+  }
 }
 .localisation__input input {
   border: none;
@@ -190,6 +223,18 @@ p {
   margin-left: 10px;
   width: 33vw;
 }
+@media (min-width: 992px) {
+  .localisation__input input {
+    font-size: inherit;
+    width: 10%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .localisation__input input {
+    font-size: inherit;
+    width: 20%;
+  }
+}
 .localisation__input button {
   display: none;
 }
@@ -198,6 +243,16 @@ p {
   padding: 5vh 5vw 10vh 5vw;
   background-color: #F2F2F2;
   text-align: center;
+}
+@media (min-width: 992px) {
+  .presentation {
+    padding: 2vh 5vw 5vh 5vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .presentation {
+    padding: 1vh 5vw 2vh 5vw;
+  }
 }
 .presentation__heading {
   width: 80%;
@@ -217,20 +272,68 @@ p {
   margin-top: 8vh;
   padding: 2.5vh 6vw;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .presentation__btn {
+    font-size: 0.8rem;
+  }
+}
 .presentation__btn:hover {
   cursor: pointer;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   filter: brightness(1.2);
 }
+@media (min-width: 992px) {
+  .presentation__btn {
+    margin: 3vh auto;
+    font-size: inherit;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .presentation__btn {
+    margin-top: 3vh;
+  }
+}
 .presentation__btn:active {
   transform: translateY(4px);
   box-shadow: none;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .presentation__btn {
+    padding: 1.5vh 5vw;
+  }
+}
 
 .fonctionnement {
   padding: 5vh 5vw 10vh 5vw;
+}
+@media (min-width: 992px) {
+  .fonctionnement {
+    max-width: 1200px;
+    margin: 5vh auto;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fonctionnement {
+    padding: 0vh 5vw 5vh 5vw;
+  }
+}
+.fonctionnement__container {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 992px) {
+  .fonctionnement__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fonctionnement__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .fonctionnement button {
   border: none;
@@ -245,10 +348,28 @@ p {
   margin: 3.5vh 0 0 3vw;
   background-color: #F2F2F2;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fonctionnement button {
+    font-size: 0.8rem;
+  }
+}
 .fonctionnement button:hover {
   cursor: pointer;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   filter: brightness(1.2);
+}
+@media (min-width: 992px) {
+  .fonctionnement button {
+    height: 6vh;
+    width: 30%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fonctionnement button {
+    height: 5vh;
+    margin: 1vh 0 0 0;
+    width: 31%;
+  }
 }
 .fonctionnement button:hover {
   background-color: #ff79DA21;
@@ -263,9 +384,30 @@ p {
   padding: 12px 8px;
   margin-left: -3vw;
 }
+@media (min-width: 992px) {
+  .fonctionnement button span {
+    margin-left: -0.7vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fonctionnement button span {
+    margin-left: -1.5vw;
+  }
+}
 .fonctionnement button i {
   margin: 0 6vw;
   font-size: 1.2rem;
+}
+@media (min-width: 992px) {
+  .fonctionnement button i {
+    margin: 0 2vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .fonctionnement button i {
+    margin: 0 1vw;
+    font-size: 1rem;
+  }
 }
 
 #restaurants {
@@ -277,6 +419,41 @@ p {
   padding: 5vh 5vw 10vh 5vw;
   background-color: #F2F2F2;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants {
+    padding: 3vh 5vw 5vh 5vw;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 992px) {
+  .restaurants-flex h2 {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-flex h2 {
+    width: 100%;
+    margin: 0;
+  }
+}
 .restaurants-card {
   position: relative;
   display: flex;
@@ -286,6 +463,18 @@ p {
   border-radius: 20px;
   width: 100%;
   margin-top: 3.5vh;
+}
+@media (min-width: 992px) {
+  .restaurants-card {
+    width: 24%;
+    height: 28vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-card {
+    width: 48%;
+    height: 21vh;
+  }
 }
 .restaurants-card:hover {
   cursor: pointer;
@@ -305,18 +494,54 @@ p {
   color: green;
   background-color: #99E2D0;
 }
+@media (min-width: 992px) {
+  .restaurants-card__image span {
+    top: 1.5vh;
+    right: 1vw;
+  }
+}
 .restaurants-card__image img {
   width: 100%;
   object-fit: cover;
   height: 26vh;
   border-radius: 18px 18px 0 0;
 }
+@media (min-width: 992px) {
+  .restaurants-card__image img {
+    height: 20vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-card__image img {
+    height: 14vh;
+  }
+}
 .restaurants-card__heading, .restaurants-card__byline {
   padding-left: 3.5vw;
+}
+@media (min-width: 992px) {
+  .restaurants-card__heading, .restaurants-card__byline {
+    padding-left: 1.5vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-card__heading, .restaurants-card__byline {
+    padding-left: 1.5vw;
+  }
 }
 .restaurants-card label.jaime {
   position: inherit;
   top: -25px;
+}
+@media (min-width: 992px) {
+  .restaurants-card label.jaime {
+    top: -5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-card label.jaime {
+    top: -3vh;
+  }
 }
 .restaurants-card input[type=checkbox] {
   display: none;
@@ -329,6 +554,16 @@ p {
   color: #000;
   background-image: #F2F2F2;
 }
+@media (min-width: 992px) {
+  .restaurants-card input[type=checkbox].check + label i {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-card input[type=checkbox].check + label i {
+    font-size: 2rem;
+  }
+}
 .restaurants-card input[type=checkbox].check:hover + label i, .restaurants-card input[type=checkbox].check:checked + label i {
   cursor: pointer;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -338,6 +573,18 @@ p {
 }
 .restaurants-card i {
   right: 6vw;
+}
+@media (min-width: 992px) {
+  .restaurants-card i {
+    right: 1vw;
+    margin-top: -2.5vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .restaurants-card i {
+    right: 3vw;
+    margin-top: -2vh;
+  }
 }
 
 .footer {
@@ -381,6 +628,16 @@ p {
   position: inherit;
   top: -25px;
 }
+@media (min-width: 992px) {
+  .carte--flex label.jaime {
+    top: -5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte--flex label.jaime {
+    top: -3vh;
+  }
+}
 .carte--flex input[type=checkbox] {
   display: none;
 }
@@ -392,6 +649,16 @@ p {
   color: #000;
   background-image: #F2F2F2;
 }
+@media (min-width: 992px) {
+  .carte--flex input[type=checkbox].check + label i {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte--flex input[type=checkbox].check + label i {
+    font-size: 2rem;
+  }
+}
 .carte--flex input[type=checkbox].check:hover + label i, .carte--flex input[type=checkbox].check:checked + label i {
   cursor: pointer;
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -399,8 +666,27 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (min-width: 992px) {
+  .carte--flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5vh 5vw 0vh 5vw;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte--flex {
+    padding: 5vh 5vw 3vh 5vw;
+  }
+}
 .carte--flex i {
   right: 3vw;
+}
+@media (min-width: 992px) {
+  .carte--flex i {
+    right: 0vw;
+  }
 }
 .carte__subheading {
   position: relative;
@@ -440,6 +726,11 @@ p {
 .carte .menu input[type=checkbox].menu__check:checked + .menu__selection {
   opacity: 100%;
   width: 16vw;
+}
+@media (min-width: 992px) {
+  .carte .menu input[type=checkbox].menu__check:checked + .menu__selection {
+    width: 5vw;
+  }
 }
 .carte .menu__info {
   padding: 1.5vh;
@@ -500,6 +791,11 @@ p {
   opacity: 100%;
   width: 16vw;
 }
+@media (min-width: 992px) {
+  .carte .menu:hover .menu__selection, .carte .menu:checked .menu__selection {
+    width: 5vw;
+  }
+}
 .carte .menu:hover .menu__selection--hover {
   transform: rotate(0deg);
 }
@@ -517,14 +813,47 @@ p {
   margin-top: 8vh;
   padding: 2.5vh 10vw;
 }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte .menu__btn {
+    font-size: 0.8rem;
+  }
+}
 .carte .menu__btn:hover {
   cursor: pointer;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
   filter: brightness(1.2);
 }
+@media (min-width: 992px) {
+  .carte .menu__btn {
+    margin: 3vh auto;
+    font-size: inherit;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte .menu__btn {
+    margin-top: 3vh;
+  }
+}
 .carte .menu__btn:active {
   transform: translateY(4px);
   box-shadow: none;
+}
+@media (min-width: 992px) {
+  .carte .menu__btn {
+    padding: 2.5vh 5vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte .menu__btn {
+    padding: 1.5vh 5vw;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .carteItem {
+    width: 32%;
+  }
 }
 
 /* @import "./layout/form"; */

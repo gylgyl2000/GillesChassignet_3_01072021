@@ -1,5 +1,11 @@
 .localisation {
     padding-top: $layout-padding-top;
+    @include desktop {
+        padding-top: 12vh;
+    }
+    @include tablet {
+        padding-top: 8vh;
+    }
     &__input {
         width: 100%;
         height: 8vh;
@@ -9,8 +15,17 @@
         justify-content: center;
         align-items: center;
         box-shadow: rgba(0, 0, 0, 0.2) 0 5px 3px 0px inset;
+        @include tablet {
+            height: 6vh;
+        }
         & i {
             font-size: 1rem;
+            @include desktop {
+                font-size: inherit;
+            }
+            @include tablet {
+                font-size: inherit;
+            }
         }
         & input {
             border: none;
@@ -20,6 +35,14 @@
             font-weight: bolder;
             margin-left: 10px;
             width: 33vw;
+            @include desktop {
+                font-size: inherit;
+                width: 10%;
+            }
+            @include tablet {
+                font-size: inherit;
+                width: 20%;
+            }
         }
         & button {
             display: none;

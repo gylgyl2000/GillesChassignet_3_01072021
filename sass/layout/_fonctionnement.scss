@@ -1,0 +1,54 @@
+.fonctionnement {
+    padding: $layout-padding;
+    @include desktop {
+        max-width: 1200px;
+        margin: 5vh auto;
+        padding: 0;
+    }
+    @include tablet {
+        padding: 0vh 5vw 5vh 5vw;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    & button {
+        @include fonctionnement-btn;
+        & span {
+            float: left;
+            font-size: 0.9rem;
+            color: white;
+            background-color: #9356DC;
+            line-height: 0px;
+            border-radius: 50%;
+            padding: 12px 8px;
+            margin-left: -3vw;
+            @include desktop {
+                margin-left: -0.7vw;
+            }
+            @include tablet {
+                margin-left: -1.5vw;
+            }
+        }
+        & i {
+            margin: 0 6vw;
+            font-size: 1.2rem;
+            @include desktop {
+                margin: 0 2vw;
+            }
+            @include tablet {
+                margin: 0 1vw;
+                font-size: 1rem;
+            }
+        }
+    }
+}

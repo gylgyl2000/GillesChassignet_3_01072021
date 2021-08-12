@@ -1,0 +1,51 @@
+.spinner {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: $colour-white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
+    & .spin {
+        position: absolute;
+        border: 3px solid $colour-primary;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        border-radius: 50%;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    & #loader2 {
+        border: 3px solid $colour-secondary;
+        width: 220px;
+        height: 220px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    & #loader3 {
+        border: 3px solid $colour-tertiary;
+        width: 240px;
+        height: 240px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        animation: rotate 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    & #loader4 {
+        border: 3px solid $colour-grey-bold;
+        width: 260px;
+        height: 260px;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        animation: rotate2 2s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+    }
+    &__text {
+        color: $colour-primary;
+        font-family: Arial;
+        font-size: 15px;
+    }
+}

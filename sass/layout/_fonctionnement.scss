@@ -46,9 +46,12 @@
                 margin: 0 2vw;
             }
             @include tablet {
-                margin: 0 1vw;
+                margin: 4px 1vw;
                 font-size: 1rem;
             }
+        }
+        &.actif {
+            background-color: $colour-secondary-light;
         }
     }
 }

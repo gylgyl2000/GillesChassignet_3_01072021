@@ -63,6 +63,9 @@
                 @include desktop {
                     width: 5vw;
                 }
+                @include tablet {
+                    width: 10vw;
+                }
             }
         }
         &__info {
@@ -101,6 +104,9 @@
             width: 16vw;
             @include desktop {
                 width: 5vw;
+            }
+            @include tablet {
+                width: 10vw;
             }
         }
         &:hover .menu__selection--hover {

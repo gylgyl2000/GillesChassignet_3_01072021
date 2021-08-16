@@ -106,7 +106,7 @@
     @include tablet {
         margin-top: 3vh;
     }
-    &:active {
+    &:actif {
         transform: translateY(4px);
         box-shadow: none;
     }

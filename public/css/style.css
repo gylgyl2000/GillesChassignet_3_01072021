@@ -275,7 +275,7 @@ p {
     margin-top: 3vh;
   }
 }
-.presentation__btn:active {
+.presentation__btn:actif {
   transform: translateY(4px);
   box-shadow: none;
 }
@@ -813,7 +813,7 @@ p {
     margin-top: 3vh;
   }
 }
-.carte .menu__btn:active {
+.carte .menu__btn:actif {
   transform: translateY(4px);
   box-shadow: none;
 }

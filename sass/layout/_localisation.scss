@@ -15,37 +15,18 @@
         justify-content: center;
         align-items: center;
         box-shadow: rgba(0, 0, 0, 0.2) 0 5px 3px 0px inset;
+        font-weight: 500;
         @include tablet {
             height: 6vh;
         }
         & i {
-            font-size: 1rem;
+            padding-right: 15px;
             @include desktop {
                 font-size: inherit;
             }
             @include tablet {
                 font-size: inherit;
             }
-        }
-        & input {
-            border: none;
-            height: 4vh;
-            font-size: 1rem;
-            background-color: transparent;
-            font-weight: bolder;
-            margin-left: 10px;
-            width: 33vw;
-            @include desktop {
-                font-size: inherit;
-                width: 10%;
-            }
-            @include tablet {
-                font-size: inherit;
-                width: 20%;
-            }
-        }
-        & button {
-            display: none;
         }
     }
 }

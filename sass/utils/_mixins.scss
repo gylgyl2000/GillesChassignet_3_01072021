@@ -9,7 +9,7 @@
     margin-top: 3.5vh;
     @include desktop {
         width: 24%;
-        height: 28vh;
+        height: 24vh;
     }
     @include tablet {
         width: 48%;
@@ -32,7 +32,7 @@
     height: 26vh;
     border-radius: 18px 18px 0 0;
     @include desktop {
-        height: 20vh;
+        height: 16vh;
     }
     @include tablet {
         height: 14vh;
@@ -64,12 +64,6 @@
             transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
             color: #000;
             background-image: $colour-grey-light;
-            @include desktop {
-                font-size: 2rem;
-            }
-            @include tablet {
-                font-size: 2rem;
-            }
         }
         &.check:hover + label i, &.check:checked + label i {
             cursor: pointer;

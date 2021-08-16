@@ -9,8 +9,13 @@
         flex-direction: row;
         align-items: center;
     }
-    &__link--hided {
-        display: none;
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        padding-bottom: 5px;
+        &--hided {
+            display: none;
+        }
     }
     &__logo {
         width: 100%;

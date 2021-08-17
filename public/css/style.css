@@ -68,8 +68,9 @@ h1 {
 }
 @media (min-width: 992px) {
   .carte h1 {
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin: 0 auto;
   }
 }
 
@@ -170,9 +171,6 @@ p {
   color: inherit;
   padding-bottom: 5px;
 }
-.header__link--hided {
-  display: none;
-}
 .header__logo {
   width: 100%;
   text-align: center;
@@ -183,13 +181,16 @@ p {
 }
 @media (min-width: 992px) {
   .localisation {
-    padding-top: 12vh;
+    padding-top: 10vh;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .localisation {
     padding-top: 8vh;
   }
+}
+.localisation h2 {
+  display: none;
 }
 .localisation__input {
   width: 100%;
@@ -275,7 +276,7 @@ p {
     margin-top: 3vh;
   }
 }
-.presentation__btn:actif {
+.presentation__btn:active {
   transform: translateY(4px);
   box-shadow: none;
 }
@@ -448,6 +449,7 @@ p {
   border-radius: 20px;
   width: 100%;
   margin-top: 3.5vh;
+  background-color: #F2F2F2;
 }
 @media (min-width: 992px) {
   .restaurants-card {
@@ -464,7 +466,7 @@ p {
 .restaurants-card:hover {
   cursor: pointer;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-  filter: brightness(0.9);
+  filter: brightness(1.1);
 }
 .restaurants-card a {
   text-decoration: none;
@@ -519,50 +521,73 @@ p {
   }
 }
 .restaurants-card label.jaime {
-  position: inherit;
-  top: -25px;
+  height: 2rem;
+  width: 2rem;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
 }
-@media (min-width: 992px) {
-  .restaurants-card label.jaime {
-    top: -5px;
-  }
+.restaurants-card label.jaime::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  background: linear-gradient(#FF79DA, #9356DC);
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .restaurants-card label.jaime {
-    top: -3vh;
-  }
+.restaurants-card label.jaime:hover::before {
+  opacity: 1;
 }
 .restaurants-card input[type=checkbox] {
   display: none;
 }
-.restaurants-card input[type=checkbox].check + label i {
-  font-weight: inherit;
+.restaurants-card input[type=checkbox].check + label i.far, .restaurants-card input[type=checkbox].check + label i.fas {
+  transition-duration: 0.25s;
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
   position: absolute;
-  font-size: 1.5rem;
-  transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
-  color: #000;
-  background-image: #F2F2F2;
+  font-size: 1.6rem;
+  height: 100%;
+  width: 100%;
 }
-.restaurants-card input[type=checkbox].check:hover + label i, .restaurants-card input[type=checkbox].check:checked + label i {
-  cursor: pointer;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  font-weight: bold;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.restaurants-card input[type=checkbox].check:hover + label i.far {
+  opacity: 0;
 }
-.restaurants-card i {
-  right: 6vw;
+.restaurants-card input[type=checkbox].check:checked + label i.far {
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+.restaurants-card input[type=checkbox].check:checked + label::before {
+  opacity: 1;
+}
+.restaurants-card__jaime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurants-card__jaime .jaime {
+  top: 1vh;
+  right: 4vw;
 }
 @media (min-width: 992px) {
-  .restaurants-card i {
+  .restaurants-card__jaime .jaime {
     right: 1vw;
-    margin-top: -2.5vh;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .restaurants-card i {
-    right: 3vw;
-    margin-top: -2vh;
+  .restaurants-card__jaime .jaime {
+    right: 2vw;
   }
 }
 
@@ -604,36 +629,55 @@ p {
   padding: 5vh 5vw 10vh 5vw;
 }
 .carte--flex label.jaime {
-  position: inherit;
-  top: -25px;
+  height: 2rem;
+  width: 2rem;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
 }
-@media (min-width: 992px) {
-  .carte--flex label.jaime {
-    top: -5px;
-  }
+.carte--flex label.jaime::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  background: linear-gradient(#FF79DA, #9356DC);
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .carte--flex label.jaime {
-    top: -3vh;
-  }
+.carte--flex label.jaime:hover::before {
+  opacity: 1;
 }
 .carte--flex input[type=checkbox] {
   display: none;
 }
-.carte--flex input[type=checkbox].check + label i {
-  font-weight: inherit;
+.carte--flex input[type=checkbox].check + label i.far, .carte--flex input[type=checkbox].check + label i.fas {
+  transition-duration: 0.25s;
+  background-color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
   position: absolute;
-  font-size: 1.5rem;
-  transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
-  color: #000;
-  background-image: #F2F2F2;
+  font-size: 1.6rem;
+  height: 100%;
+  width: 100%;
 }
-.carte--flex input[type=checkbox].check:hover + label i, .carte--flex input[type=checkbox].check:checked + label i {
-  cursor: pointer;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  font-weight: bold;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.carte--flex input[type=checkbox].check:hover + label i.far {
+  opacity: 0;
+}
+.carte--flex input[type=checkbox].check:checked + label i.far {
+  opacity: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+.carte--flex input[type=checkbox].check:checked + label::before {
+  opacity: 1;
 }
 @media (min-width: 992px) {
   .carte--flex {
@@ -649,8 +693,19 @@ p {
     padding: 5vh 5vw 3vh 5vw;
   }
 }
-.carte--flex i {
-  right: 3vw;
+.carte--flex header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 992px) {
+  .carte--flex header {
+    display: contents;
+  }
+}
+.carte--flex header .jaime {
+  top: -1vh;
+  left: -5vw;
 }
 @media (min-width: 992px) {
   .carte--flex i {
@@ -673,12 +728,22 @@ p {
 .carte .menu {
   display: flex;
   position: relative;
-  height: 11vvh;
+  height: 11vh;
   background-color: #fff;
   border-radius: 15px;
   margin-top: 2vh;
   animation: slideup 1s ease-in-out;
   animation-fill-mode: backwards;
+}
+@media (min-width: 992px) {
+  .carte .menu {
+    height: 9vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carte .menu {
+    height: 8vh;
+  }
 }
 .carte .menu:nth-child(3) {
   animation-delay: 0.4s;
@@ -813,7 +878,7 @@ p {
     margin-top: 3vh;
   }
 }
-.carte .menu__btn:actif {
+.carte .menu__btn:active {
   transform: translateY(4px);
   box-shadow: none;
 }

@@ -21,8 +21,19 @@
         @include tablet {
             padding: 5vh 5vw 3vh 5vw;
         }
+        & header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include desktop {
+                display: contents;
+            }
+            & .jaime {
+                top: -1vh;
+                left: -5vw;
+            }
+        }
         & i {
-            right: 3vw;
             @include desktop {
                 right: 0vw;
             }
@@ -44,7 +55,13 @@
     & .menu {
         display: flex;
         position: relative;
-        height: 11vvh;
+        height: 11vh;
+        @include desktop {
+            height: 9vh;
+        }
+        @include tablet {
+            height: 8vh;
+        }
         background-color: $colour-white;
         border-radius: 15px;
         margin-top: 2vh;

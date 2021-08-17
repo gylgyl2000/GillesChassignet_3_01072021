@@ -7,6 +7,7 @@
     border-radius: 20px;
     width: 100%;
     margin-top: 3.5vh;
+    background-color: $colour-grey-light;
     @include desktop {
         width: 24%;
         height: 24vh;
@@ -18,7 +19,7 @@
     &:hover {
         cursor: pointer;
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-        filter: brightness(0.9);
+        filter: brightness(1.1);
     }
 }
 
@@ -46,31 +47,54 @@
 
 @mixin jaime {
     & label.jaime {
-        position: inherit;
-        top: -25px;
-        @include desktop {
-            top: -5px;
+        height: 2rem;
+        width: 2rem;
+        border: 0 solid transparent;
+        padding: 0;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        background-color: #000;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s;
+            content: "";
+            background: linear-gradient($colour-secondary, $colour-primary);
         }
-        @include tablet {
-            top: -3vh;
+        &:hover::before {
+            opacity: 1;
         }
     }
     & input[type="checkbox"] {
         display: none;
-        &.check + label i {
-            font-weight: inherit;
+        &.check + label i.far, &.check + label i.fas {
+            transition-duration: .25s;
+            background-color: $colour-grey-light;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            mix-blend-mode: lighten;
             position: absolute;
-            font-size: 1.5rem;
-            transition: background-image 1s, -webkit-background-clip 1s, -webkit-text-fill-color 1s, font-weight 1s;
-            color: #000;
-            background-image: $colour-grey-light;
+            font-size: 1.6rem;
+            height: 100%;
+            width: 100%;
         }
-        &.check:hover + label i, &.check:checked + label i {
-            cursor: pointer;
-            background-image: linear-gradient($colour-secondary, $colour-primary);
-            font-weight: bold;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        &.check:hover + label i.far {
+            opacity: 0;
+        }
+        &.check:checked + label i.far {
+            opacity: 0;
+            background: linear-gradient($colour-secondary, $colour-primary);
+        }
+        &.check:checked + label::before {
+            opacity: 1;
         }
     }
 }
@@ -106,7 +130,7 @@
     @include tablet {
         margin-top: 3vh;
     }
-    &:actif {
+    &:active {
         transform: translateY(4px);
         box-shadow: none;
     }

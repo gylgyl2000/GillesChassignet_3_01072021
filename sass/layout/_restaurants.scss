@@ -71,15 +71,19 @@
             }
         }
         @include jaime;
-        & i {
-            right: 6vw;
-            @include desktop {
-                right: 1vw;
-                margin-top: -2.5vh;
-            }
-            @include tablet {
-                right: 3vw;
-                margin-top: -2vh;
+        &__jaime {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            & .jaime {
+                top: 1vh;
+                right: 4vw;
+                @include desktop {
+                    right: 1vw;
+                }
+                @include tablet {
+                    right: 2vw;
+                }
             }
         }
     }

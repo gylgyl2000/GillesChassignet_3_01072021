@@ -1,10 +1,13 @@
 .localisation {
     padding-top: $layout-padding-top;
     @include desktop {
-        padding-top: 12vh;
+        padding-top: 10vh;
     }
     @include tablet {
         padding-top: 8vh;
+    }
+    & h2 {
+        display: none;
     }
     &__input {
         width: 100%;

@@ -8,6 +8,13 @@
     <title>Ohmyfood! Paris</title>
 </head>
 <body>
+    <!-- En-tête -->
+    <header class="header">
+        <h1 class="header__logo">
+            ohmyfood
+        </h1>
+    </header>
+    <!-- Loader spinner -->
     <div class="spinner">
         <div id="loader" class="spin"></div>
         <div id="loader2" class="spin"></div>
@@ -15,19 +22,9 @@
         <div id="loader4" class="spin"></div>
         <span class="spinner__text">LOADING...</span>
     </div>
-    <!-- En-tête -->
-    <header class="header">
-        <nav class="header__nav">
-            <a class="header__link--hided" href="index.html" title="Retour à la page d'accueil">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <h1 class="header__logo">
-                ohmyfood
-            </h1>
-        </nav>
-    </header>
     <!-- Localisation -->
     <section class="localisation">
+        <h2>Localisation</h2>
         <div class="localisation__input">            
             <span class="input"><i class="fas fa-map-marker-alt"></i> Paris, Belleville</span>
         </div>
@@ -69,13 +66,18 @@
                             alt="La palette du goût">
                     </a>
                 </div>
-                <a href="la-palette-du-gout.html">
-                    <h3 class="restaurants-card__heading">
-                        La palette du goût
-                    </h3>
-                </a>
-                <input type="checkbox" id="jaime-restau1" name="jaime-restau1" class="check jaime" value="J'aime">
-                <label for="jaime-restau1"><i class="far fa-heart"></i></label>
+                <div class="restaurants-card__jaime">
+                    <a href="la-palette-du-gout.html">
+                        <h3 class="restaurants-card__heading">
+                            La palette du goût
+                        </h3>
+                    </a>
+                    <input type="checkbox" id="jaime-restau1" name="jaime-restau1" class="check jaime" value="J'aime">
+                    <label class="jaime" for="jaime-restau1">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
                 <a href="la-palette-du-gout.html">
                     <p class="restaurants-card__byline">
                         Ménilmontant
@@ -92,13 +94,18 @@
                             alt="La note enchantée">
                     </a>
                 </div>
-                <a href="la-note-enchantee.html">
-                    <h3 class="restaurants-card__heading">
-                        La note enchantée
-                    </h3>
-                </a>
-                <input type="checkbox" id="jaime-restau2" name="jaime-restau2" class="check jaime" value="J'aime">
-                <label for="jaime-restau2"><i class="far fa-heart"></i></label>
+                <div class="restaurants-card__jaime">
+                    <a href="la-note-enchantee.html">
+                        <h3 class="restaurants-card__heading">
+                            La note enchantée
+                        </h3>
+                    </a>
+                    <input type="checkbox" id="jaime-restau2" name="jaime-restau2" class="check jaime" value="J'aime">
+                    <label class="jaime" for="jaime-restau2">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
                 <a href="la-note-enchantee.html">
                     <p class="restaurants-card__byline">
                         Charonne
@@ -114,13 +121,18 @@
                             alt="À la française">
                     </a>
                 </div>
-                <a href="a-la-francaise.html">
-                    <h3 class="restaurants-card__heading">
-                        À la française
-                    </h3>
-                </a>
-                <input type="checkbox" id="jaime-restau3" name="jaime-restau3" class="check jaime" value="J'aime">
-                <label for="jaime-restau3"><i class="far fa-heart"></i></label>
+                <div class="restaurants-card__jaime">
+                    <a href="a-la-francaise.html">
+                        <h3 class="restaurants-card__heading">
+                            À la française
+                        </h3>
+                    </a>
+                    <input type="checkbox" id="jaime-restau3" name="jaime-restau3" class="check jaime" value="J'aime">
+                    <label class="jaime" for="jaime-restau3">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
                 <a href="a-la-francaise.html">
                     <p class="restaurants-card__byline">
                         Cité Rouge
@@ -136,13 +148,18 @@
                             alt="Le délice des sens">
                     </a>
                 </div>
-                <a href="le-delice-des-sens.html">
-                    <h3 class="restaurants-card__heading">
-                        Le délice des sens
-                    </h3>
-                </a>
-                <input type="checkbox" id="jaime-restau4" name="jaime-restau4" class="check jaime" value="J'aime">
-                <label for="jaime-restau4"><i class="far fa-heart"></i></label>
+                <div class="restaurants-card__jaime">
+                    <a href="le-delice-des-sens.html">
+                        <h3 class="restaurants-card__heading">
+                            Le délice des sens
+                        </h3>
+                    </a>
+                    <input type="checkbox" id="jaime-restau4" name="jaime-restau4" class="check jaime" value="J'aime">
+                    <label class="jaime" for="jaime-restau4">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </label>
+                </div>
                 <a href="le-delice-des-sens.html">
                     <p class="restaurants-card__byline">
                         Folie-Méricourt

@@ -4,8 +4,9 @@
   "description": "GillesChassignet_3_01072021",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --watch ./public/css/style.css:./public/css/style.min.css --style compressed"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gylgyl2000/GillesChassignet_3_01072021.git"

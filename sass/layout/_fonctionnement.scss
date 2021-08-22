@@ -52,6 +52,10 @@
         }
         &.actif {
             background-color: $colour-secondary-light;
+            & i {
+                color: $colour-primary;
+                
+            }
         }
     }
 }

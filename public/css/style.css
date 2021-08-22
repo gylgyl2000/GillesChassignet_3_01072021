@@ -356,6 +356,9 @@ p {
 .fonctionnement button:hover {
   background-color: #ff79DA21;
 }
+.fonctionnement button:hover i {
+  color: #9356DC;
+}
 .fonctionnement button span {
   float: left;
   font-size: 0.9rem;
@@ -393,6 +396,9 @@ p {
 }
 .fonctionnement button.actif {
   background-color: #ff79DA21;
+}
+.fonctionnement button.actif i {
+  color: #9356DC;
 }
 
 #restaurants {
